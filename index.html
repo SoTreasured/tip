@@ -27,7 +27,9 @@
         var price =  window.prompt("Enter the cost of the goods bought / services rendered to you");
         var rate = window.prompt("How will you rate the quality of services you received.\nChoose an option:\n1. Fair\n2. Good \n3. Excellent");
 
-            if (rate == 1){
+            if ((price == "")|| isNaN(price)){
+               alert("Please input a valid digit for the cost of goods / services");
+            }else if (rate == 1){
                alert("You received a fair quality service and should tip the seller N" + (price*0.03) + 
                "\n\nThanks for your patronage. ");
             }else if(rate == 2){
@@ -36,6 +38,8 @@
             }else if(rate == 3){
                 alert("You received an excellent quality service and should tip the seller N" + (price*0.08) + 
                 "\n\nThanks for your patronage. ");
+            }else{
+                alert("Please enter a valid input from within the three options given")
             }
          </script>
     </body>
